@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/b06e9f8025.js" crossorigin="anonymous"></script>
+
+    <!-- The font families I'm using -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>E-Commerce Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <button id="hamburger" title="Menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            <a class="logo" href="/">
+                <p>Another</p>
+                <p class="healthy">Generic</p>
+                <p>company</p>
+            </a>
+
+            <div class="menu_combiner">
+                <div class="menu" id="menu">
+                    <button id="close_menu" onclick="toggleMenu()">&#x2716;</button>
+                    <a class="menu_links active" href="#">HOME</a>
+                    <a class="menu_links" href="#">LISTING</a>
+                    <a class="menu_links" href="#">CONTACT US</a>
+                </div>
+    
+                <button id="shopping_cart_button">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p id="number_of_items">1</p>
+                </button>
+            </div>
+            
+        </div>
+    </nav>
+    <section id="top_landing">
+        <div class="container">
+            <h1 class="title_text">Hello Health,</h1>
+            <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nemo aut libero, illum quia officia.</p>
+            <a href="#shop_items" id="cta_button">Let's Get Started</a>   
+        </div>
+    </section>
+
+    <section id="shop_items">
+        <div class="container">
+            <h2>Item Listing</h2>
+
+            <div class="product_cards_holder">
+                <div class="product_card">
+                    <div class="title">
+                        <h3>Awesome Product 01</h3>
+                        <p class="pricing">₹100</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>(4.7)</p>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="desc">
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor explicabo praesentium illo quisquam facilis fugiat, ipsum hic suscipit asperiores nam porro molestias ipsa quibusdam quaerat, pariatur, quas quam magni quod.</p>
+                            <ul class="feature-set">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+                        <div class="product_image">
+                            <img src="./images/blur-box-capsules-close-up-593451.jpg" alt="product_image">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product_card">
+                    <div class="title">
+                        <h3>Awesome Product 02</h3>
+                        <p class="pricing">₹100</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>(4.7)</p>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="desc">
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor explicabo praesentium illo quisquam facilis fugiat, ipsum hic suscipit asperiores nam porro molestias ipsa quibusdam quaerat, pariatur, quas quam magni quod.</p>
+                            <ul class="feature-set">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+                        <div class="product_image">
+                            <img src="./images/blur-box-capsules-close-up-593451.jpg" alt="product_image">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product_card">
+                    <div class="title">
+                        <h3>Awesome Product 03</h3>
+                        <p class="pricing">₹100</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>(4.7)</p>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="desc">
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor explicabo praesentium illo quisquam facilis fugiat, ipsum hic suscipit asperiores nam porro molestias ipsa quibusdam quaerat, pariatur, quas quam magni quod.</p>
+                            <ul class="feature-set">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+                        <div class="product_image">
+                            <img src="./images/blur-box-capsules-close-up-593451.jpg" alt="product_image">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="product_card">
+                    <div class="title">
+                        <h3>Awesome Product 04</h3>
+                        <p class="pricing">₹100</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>(4.7)</p>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div class="desc">
+                            <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor explicabo praesentium illo quisquam facilis fugiat, ipsum hic suscipit asperiores nam porro molestias ipsa quibusdam quaerat, pariatur, quas quam magni quod.</p>
+                            <ul class="feature-set">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem ipsum dolor sit amet.</li>
+                            </ul>
+                        </div>
+                        <div class="product_image">
+                            <img src="./images/blur-box-capsules-close-up-593451.jpg" alt="product_image">
+                        </div>
+                    </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonies">
+        <div class="container">
+            <h2>Testimonies</h2>
+            <div class="testemone_carasoul">
+                <div class="testemone_card fade">
+                    <p class="quote">&#8220;</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maxime temporibus sint incidunt voluptatum veniam deserunt quidem impedit error iste.</p>
+                    <p class="author">-Abc Def</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <p>(4.0)</p>
+                    </div>
+                </div>
+                <div class="testemone_card fade">
+                    <p class="quote">&#8220;</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maxime impedit error iste.</p>
+                    <p class="author">-Def Abc</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <p>(4.0)</p>
+                    </div>
+                </div>
+                <div class="testemone_card fade">
+                    <p class="quote">&#8220;</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisi.</p>
+                    <p class="author">-Pqrs Tuv</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <p>(4.0)</p>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+                <a class="next" onclick="plusSlides(1)">&gt;</a>
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div>Designed🎨 and Developed💻 by <a href="https://www.ayushmanbthakur.com" target="_blank" rel=”noopener noreferrer”>Ayushman Bilas Thakur</a></div>
+        </div>
+    </footer>
+
+    <a class="action_button" href="https://api.whatsapp.com/send?phone=919830048982text=I%20want%20to%20know...">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="popup_holder deactive" id="popup_holder">
+        <div class="offer_popup">
+            <button id="offer_close_button" onclick="closePopup()">&#x2716;</button>
+            <h3 class="offer_text">15% off</h3>
+            <p class="description">Get <strong>15% off + Free Delivery</strong> on this order</p>
+            <small>Use Cupon Code:</small>
+            <h3 class="code">FIRSTTIME</h3>
+    
+            <button id="popup_cta_button" onclick="closePopup()">CONTINUE</button>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

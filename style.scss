@@ -1,0 +1,479 @@
+//resets
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+button{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+//variables
+:root{
+    --primary-color: #72ECD6;
+    --secondary-color: #e79f19;
+    --rose-red: #FF6161;
+}
+
+//helper classes
+.container{
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.stars{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    i{
+        color: orange;
+    }
+    p{
+        margin-left: 5px;
+    }
+}
+
+
+//specific styles
+nav{
+    position: fixed;
+    width: 100vw;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+    padding: 10px 0;
+    color: white;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button{
+            font-size: 1.2rem;
+            color: white;
+        }
+        .logo{
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            .healthy{
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: var(--primary-color);
+            }
+        }
+        #shopping_cart_button{
+            position: relative;
+            p{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: -15px;
+                right: -10px;
+                font-size: 0.8rem;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: var(--rose-red);
+                color: white;
+            }
+        }
+        .menu{
+            position: fixed;
+            z-index: 100;
+            top:0;
+            left:0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            padding: 40px;
+            transition: transform 0.2s ease;
+            transform: translateX(-100%);
+            &.active{
+                transform: translateX(0);
+            }
+            a{            
+                color: white;
+                font-size: 2rem;
+                margin: 10px 0;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
+                &.active{
+                    color: gold;
+                }
+            }
+            button{
+                margin-left: auto;
+                color: goldenrod;
+                font-size: 1.4rem;
+                &:hover{
+                    color: yellow;
+                }
+            }
+        }
+    }
+
+}
+
+
+.nav-colored{
+    background-color: #cecece;
+    color: black;
+    a{
+        display: block;
+        color: black;
+    }
+    .container{
+        .logo{
+            color: black;
+        }
+        button{
+            color: black;
+        }
+    }
+    box-shadow: 7px 0 15px rgba(#000, 0.8);
+}
+
+.nav-transparent{
+    background-color: transparent;
+}
+
+#top_landing{
+    background: url("./images/woman-girl-silhouette-jogger-40751.jpg");
+    background-color: rgba(black,0.8);
+    color: white;
+    // background-color: linear-gradient(180deg, #72ECD6 0%, rgba(184, 255, 242, 0.01) 104.96%);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 130px;
+    padding-bottom: 90px;
+    .container{
+        h1{
+            color: var(--secondary-color);
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        p{
+            margin-bottom: 15px;
+            max-width: 50ch;
+        }
+        #cta_button{
+            display: block;
+            width: fit-content;
+            padding: 10px 15px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--secondary-color);
+            color: black;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;
+        }
+    }
+}
+
+#shop_items{
+    margin-top: 15px;
+    h2{
+        margin-bottom: 10px;
+    }
+    .product_card{
+        border: 2px solid black;
+        padding: 10px;
+        margin: 10px 0;
+        .title{    
+            margin-bottom: 10px;
+            
+            h3{
+                font-size: 1.3rem;
+            }
+            .pricing{
+                color: darkblue;
+                font-weight: bold;
+            }
+            
+        }
+        .body{
+            ul{
+                margin-top: 10px;
+                list-style: none;
+                margin-left: 10px;
+                li{
+                    &:nth-child(even){
+                        font-weight: bold;
+                    }
+                    &::before{
+                        content: "✅";
+                    }
+                }
+            }
+            .product_image{
+                margin-top: 10px;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#testimonies{
+    margin-top: 20px;
+    .testemone_carasoul{
+        max-width: 400px;
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        .prev, .next {
+            cursor: pointer;
+            font-family: sans-serif;
+            color: var(--primary_yellow);
+            -webkit-text-stroke-width: 3px; 
+            -webkit-text-stroke-color: black; 
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            transform: translateY(-50%);
+            padding: 16px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+          .next {
+            right: -30px;
+            border-radius: 3px 0 0 3px;
+          }
+          .prev{
+              left: -30px;
+          }
+          
+          .prev:hover, .next:hover {
+            color:#000000;
+          }
+          .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+          }
+
+          .active, .dot:hover {
+            background-color: #717171;
+          }
+          
+          /* Fading animation */
+          .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+          }
+        
+          
+          @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+        .testemone_card{
+            display: none;
+            text-align: center;
+            z-index: 5;
+            padding: 10px;
+            .quote{
+                font-weight: bold;
+                font-size: 3rem;
+                margin-bottom: -30px;
+            }
+            .author{
+                font-weight: bold;
+            }
+            .stars{
+                margin-top: 5px;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+footer{
+    margin-top: 20px;
+    padding: 10px 0;
+    width: 100vw;
+    background-color: #ddd;
+    .container{
+        margin: 0 auto;
+        div{
+            &:nth-child(1){
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.action_button{
+    position: fixed;
+    font-size: 2rem;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.popup_holder{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.8);
+    transition: all 0.2s ease-in-out;
+    &.deactive{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .offer_popup{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-width: 300px;
+        background-color: #213332;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 4px 4px 10px #000;
+        #offer_close_button{
+            width: fit-content;
+            color: white;
+            margin-left: auto;
+        }
+        .offer_text{
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 3px;
+        }
+        .description{
+            margin-bottom: 3px;
+        }
+        .code{
+            margin-top: 3px;
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+        }
+        #popup_cta_button{
+            background-color: var(--secondary-color);
+            font-weight: bold;
+            padding: 5px 10px;
+            width: fit-content;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+@media (min-width: 768px){
+    nav{
+        .container{
+            #hamburger{
+                display: none;
+            }  
+            .menu_combiner{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .menu{
+                position: initial;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: space-between;
+                background-color: transparent;
+                height: fit-content;
+                width: fit-content;
+                padding: 0; 
+                transform: translateX(0);
+                #close_menu{
+                    display: none;
+                }
+                a{
+                    font-size: 1rem;
+                    margin: 10px;
+                    color: white;
+                    &.active{
+                        color: var(--secondary-color);
+                        text-decoration: underline;
+                    }
+                }
+
+            } 
+        }
+        &.nav-colored{
+            .menu{
+                a{
+                    color: black;
+                    &.active{
+                        color: darkblue;
+                    }
+                }
+            }
+        }
+    }
+    #shop_items{
+        .product_card{
+            padding: 20px 40px;
+            .body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .product_image{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
