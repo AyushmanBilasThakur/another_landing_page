@@ -8,6 +8,9 @@
 
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding: 93px;
+    scroll-snap-type: proximity;
 }
 
 button{
@@ -250,6 +253,7 @@ nav{
         width: 95%;
         margin: 0 auto;
         position: relative;
+        z-index: -1;
         .prev, .next {
             cursor: pointer;
             font-family: sans-serif;
@@ -307,7 +311,7 @@ nav{
         .testemone_card{
             display: none;
             text-align: center;
-            z-index: 5;
+            z-index: 0;
             padding: 10px;
             .quote{
                 font-weight: bold;

@@ -14,39 +14,46 @@ window.onscroll = function () {
 
 const menu = document.querySelector("#menu")
 
-function toggleMenu() {
-  menu.classList.toggle("active");
-}
-
-
-document.querySelectorAll(".menu_links").forEach(e => e.addEventListener("click", () => toggleMenu()))
 
 //menu control with touch
 const body = document.querySelector("body");
 
 let initialX = 0;
 let moveX = 0;
-const MOVE_THRESHOLD = 250;
+
+
+const MOVE_THRESHOLD = 100;
+let isMenuOpen = false;
 
 body.addEventListener("touchstart", (e) => {
-  initialX = e.touches[0].pageX;
+  initialX = e.touches[0].clientX;
 })
 
 body.addEventListener("touchmove", (e) => {
-  moveX = e.touches[0].pageX - initialX;
+  moveX = e.touches[0].clientX - initialX;
 })
 
 body.addEventListener("touchend", (e) => {
-  if(moveX < MOVE_THRESHOLD * Math.sign(moveX)){
+  if(moveX < MOVE_THRESHOLD * -1 && isMenuOpen){
     menu.classList.remove("active")
+    isMenuOpen = false
   }
-  else if(moveX > MOVE_THRESHOLD * Math.sign(moveX)){
+  else if(moveX > MOVE_THRESHOLD && !isMenuOpen){
     menu.classList.add("active")
+    isMenuOpen = true
   }
   moveX = 0;
   initialX = 0;
 })
 
+
+function toggleMenu() {
+  menu.classList.toggle("active");
+  isMenuOpen = !isMenuOpen;
+}
+
+
+document.querySelectorAll(".menu_links").forEach(e => e.addEventListener("click", () => toggleMenu()))
 
 //slider
 let slideIndex = 1;

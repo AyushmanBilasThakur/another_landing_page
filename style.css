@@ -9,6 +9,10 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding: 93px;
+  -ms-scroll-snap-type: proximity;
+      scroll-snap-type: proximity;
 }
 
 button {
@@ -299,6 +303,7 @@ nav .container .menu button:hover {
   width: 95%;
   margin: 0 auto;
   position: relative;
+  z-index: -1;
   /* Fading animation */
 }
 
@@ -382,7 +387,7 @@ nav .container .menu button:hover {
 #testimonies .testemone_carasoul .testemone_card {
   display: none;
   text-align: center;
-  z-index: 5;
+  z-index: 0;
   padding: 10px;
 }
 
